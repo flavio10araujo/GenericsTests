@@ -15,6 +15,9 @@ public class BMain {
 		
 		printList2(li); // ok
 		printList2(ls); // ok
+		
+		printList3(li.toArray()); // ok
+		printList3(ls.toArray()); // ok
 	}
 	
 	/**
@@ -35,5 +38,14 @@ public class BMain {
 	    for (Object elem: list)
 	        System.out.print(elem + " ");
 	    System.out.println();
+	}
+	
+	public static <E> void printList3(E[] inputArray) {
+		// Display array elements.
+		for(E element : inputArray) {
+			System.out.printf("%s ", element);
+		}
+		
+		System.out.println();
 	}
 }
